@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Author: Aiserik Yerbol -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Colophon explaining the Dostyk restaurant HTML project">
+    <meta name="author" content="Aiserik Yerbol">
+    <title>Dostyk restaurant — Colophon</title>
+</head>
+
+<body>
+   
+
+    <header>
+        <h1>Dostyk restaurant</h1>
+        <!-- The colophon uses the same navigation so it remains part of the site, not a separate note. -->
+        <nav aria-label="Main navigation">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="order.html">Order</a></li>
+                <li><a href="colophon.html" aria-current="page">Colophon</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section>
+            <h2>Project plan</h2>
+            <p>
+                This website was built for the first assignment in <strong>Introduction to Web Technologies</strong>. I chose Dostyk restaurant because it is a real place in Karaganda. The pages use local information, real prices, contact details, and photographs instead of placeholder content.
+            </p>
+            <p>
+                The site uses plain <abbr title="HyperText Markup Language">HTML</abbr>. It has no hosting, domain name, <abbr title="Cascading Style Sheets">CSS</abbr>, JavaScript, templates, or frameworks. Each file can be opened directly in a browser.
+            </p>
+        </section>
+
+        <section>
+            <h2>Semantic choices</h2>
+            <p>
+                I used <code>&lt;section&gt;</code> for related content, <code>&lt;figure&gt;</code> for captioned images, and <code>&lt;address&gt;</code> for contact information. These choices keep the structure meaningful and avoid using <b>div</b> where a real HTML element is better.
+            </p>
+        </section>
+
+        <section>
+            <h2>Validation notes</h2>
+            <p>
+                I can check the repository with <kbd>git status</kbd> and test each page with the <a href="https://validator.w3.org/" target="_blank" rel="noopener noreferrer">W3C validator</a>. A valid file may show <samp>Document checking completed. No errors or warnings to show.</samp>
+            </p>
+
+            <h3>Short example</h3>
+            <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;/html&gt;</code></pre>
+        </section>
+
+        <!-- A div is used here only as a neutral wrapper for short file facts that do not need a heading. -->
+        <div class="file-summary">
+            <p>File type: <code>.html</code></p>
+            <p><small>This page explains how the website was made.</small></p>
+        </div>
+
+        <figure>
+            <img src="images/interior.jpg" alt="Comfortable interior of Dostyk restaurant" width="400" height="533" loading="lazy">
+            <figcaption>Interior view of Dostyk restaurant</figcaption>
+        </figure>
+    </main>
+
+    <footer>
+        <address>
+            Address: Karaganda, Stepnoy-4 microdistrict, building 30 &vert;
+            Phone: <a href="tel:+77475791323">+7-747-579-13-23</a> &vert;
+            Email: <a href="mailto:info@dostyk.kz">info@dostyk.kz</a>
+        </address>
+        <p>&copy; 2026 Dostyk restaurant. All rights reserved. &trade;</p>
+    </footer>
+</body>
+</html>

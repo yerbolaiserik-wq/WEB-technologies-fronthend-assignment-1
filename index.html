@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="kk">
+<!-- Author: Aiserik Yerbol -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Қарағанды қаласындағы Dostyk restaurant туралы басты бет">
+    <meta name="author" content="Aiserik Yerbol">
+    <title>Dostyk restaurant — Басты бет</title>
+</head>
+
+<body>
+    <p><a href="#main-content">Негізгі мазмұнға өту</a></p>
+
+    <header>
+        <h1>Dostyk restaurant</h1>
+        <!-- The navigation repeats on every page because the project is opened as local files, not through a server. -->
+        <nav aria-label="Негізгі навигация">
+            <ul>
+                <li><a href="index.html" aria-current="page">Басты бет</a></li>
+                <li><a href="menu.html">Ас мәзірі</a></li>
+                <li><a href="order.html">Тапсырыс беру</a></li>
+                <li><a href="colophon.html">Сайт туралы</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section id="about">
+            <h2>Дәмхана туралы</h2>
+            <p>
+                Қарағанды қаласындағы <strong>«Dostyk restaurant»</strong> ұлттық тағамға көңіл бөлетін шағын дәмхана. Мұнда қонақтарға палау, сорпа, лағман, салат және шай ұсынылады. Бұл сайт дәмхананың негізгі мәліметін бір жерге жинайды.
+            </p>
+            <p>
+                Жобаның мақсаты — нақты мекеме туралы таза <em>HTML</em> құрылымын көрсету. Бетте ас мәзіріне, тапсырыс формасына және сайттың жасалу түсіндірмесіне өтетін салыстырмалы сілтемелер бар.
+            </p>
+            <p><a href="#contact">Байланыс бөліміне өту</a></p>
+        </section>
+
+        <article>
+            <h2>Шеф-аспаз кеңесі</h2>
+            <p>Шеф-аспаз қонақтарға <q>палауды асықпай, ыстық күйінде бөлісіп жеу керек</q> деп кеңес береді.</p>
+            <blockquote cite="https://Dostyk.kz">
+                <p>«Палау — бұл жай ғана тамақ емес, бұл үлкен отбасы мен достардың басын қосатын берекелі дастарқан.»</p>
+            </blockquote>
+            <p><cite>Шеф-аспаз: Әлішер Атабаев, 15 Тамыз 2026 ж.</cite></p>
+        </article>
+
+        <!-- Contact information is an aside because it supports the page but is not the main story. -->
+        <aside id="contact">
+            <h2>Жұмыс уақыты</h2>
+            <p>Күн сайын: <mark><time datetime="10:00">10:00</time> - <time datetime="22:00">22:00</time></mark></p>
+            <p>Телефон: <a href="tel:+77475791323">+7-747-579-13-23</a></p>
+            <p>Email: <a href="mailto:info@dostyk.kz">info@dostyk.kz</a></p>
+            <p><a href="#about">Беттің басына қайту</a></p>
+        </aside>
+
+        <figure>
+            <img src="images/outside.jpg" alt="Dostyk restaurant ғимаратының сыртқы көрінісі" width="400" height="533">
+            <figcaption>Дәмхананың сыртқы көрінісі</figcaption>
+        </figure>
+
+        <figure>
+            <img src="images/palay.jpg" alt="Шойын қазанда пісірілген дәстүрлі палау" width="400" height="225" loading="lazy">
+            <figcaption>Шойын қазанда дайындалған палау</figcaption>
+        </figure>
+    </main>
+
+    <hr>
+
+    <footer>
+        <address>
+            Мекенжай:<br>
+            Қарағанды қаласы, Шағын аудан Степной-4, 30, ТД Алмаз сыртқы бағыты<br>
+            Телефон: <a href="tel:+77475791323">+7-747-579-13-23</a>
+        </address>
+        <p>&copy; 2026 Dostyk restaurant. Барлық құқықтары қорғалған. &trade;</p>
+    </footer>
+</body>
+</html>

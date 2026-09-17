@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="kk">
+<!-- Author: Aiserik Yerbol -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Dostyk restaurant тапсырыс беру және үстел брондау формасы">
+    <meta name="author" content="Aiserik Yerbol">
+    <title>Dostyk restaurant — Тапсырыс беру</title>
+</head>
+
+<body>
+    <p><a href="#main-content">Негізгі мазмұнға өту</a></p>
+
+    <header>
+        <h1>Dostyk restaurant</h1>
+        <!-- This nav stays identical across pages so the local website feels like one project. -->
+        <nav aria-label="Негізгі навигация">
+            <ul>
+                <li><a href="index.html">Басты бет</a></li>
+                <li><a href="menu.html">Ас мәзірі</a></li>
+                <li><a href="order.html" aria-current="page">Тапсырыс беру</a></li>
+                <li><a href="colophon.html">Сайт туралы</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="main-content">
+        <section id="order-form">
+            <h2>Тапсырыс және брондау</h2>
+            <p>Бұл форма жеткізуге тапсырыс беруге немесе үстел брондауға арналған. Қазір ол тек HTML үлгісі ретінде жұмыс істейді.</p>
+            <p>
+                Қонақ алдымен байланыс мәліметін жазады, содан кейін күнін, порция санын, тағамын және қызмет түрін таңдайды. Ескертулер өрісіне жеткізу мекенжайын немесе үстелге қатысты өтінішін енгізе алады.
+            </p>
+            <p>Сондықтан форма қысқа, түсінікті және дәмхана тақырыбына сәйкес.</p>
+
+            <form action="#" method="post">
+                <!-- The form does not send data yet because server-side processing will be studied later. -->
+                <fieldset>
+                    <legend>Жеке мәліметтер</legend>
+                    <p>
+                        <label for="username">Аты-жөніңіз:</label><br>
+                        <input type="text" id="username" name="username" placeholder="Т.А.Ә" autocomplete="name" required>
+                    </p>
+                    <p>
+                        <label for="useremail">Электронды пошта:</label><br>
+                        <input type="email" id="useremail" name="useremail" placeholder="example@gmail.com" autocomplete="email" required>
+                    </p>
+                    <p>
+                        <label for="userphone">Телефон:</label><br>
+                        <input type="tel" id="userphone" name="userphone" placeholder="+7**********" autocomplete="tel" required>
+                    </p>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Тапсырыс мәліметі</legend>
+                    <p>
+                        <label for="orderdate">Күні:</label><br>
+                        <input type="date" id="orderdate" name="orderdate" required>
+                    </p>
+                    <p>
+                        <label for="portion_num">Порция саны:</label><br>
+                        <input type="number" id="portion_num" name="portion_num" min="1" max="30" value="1" required>
+                    </p>
+                    <p>
+                        <label for="main_dish">Негізгі тағам:</label><br>
+                        <select id="main_dish" name="main_dish" required>
+                            <option value="">Таңдаңыз</option>
+                            <option value="palau">Палау — 2 000 &#8376;</option>
+                            <option value="kuyrdak">Қуырдақ — 3 800 &#8376;</option>
+                            <option value="lagman">Гүйру лағман — 2 000 &#8376;</option>
+                        </select>
+                    </p>
+                    <p>Қызмет түрі:<br>
+                        <input type="radio" id="delivery" name="service_type" value="delivery" checked>
+                        <label for="delivery">Жеткізу</label><br>
+                        <input type="radio" id="pickup" name="service_type" value="pickup">
+                        <label for="pickup">Өзім алып кетемін</label><br>
+                        <input type="radio" id="dinein" name="service_type" value="dinein">
+                        <label for="dinein">Дәмханада жеймін</label>
+                    </p>
+                    <p>Қосымша:<br>
+                        <input type="checkbox" id="tea" name="extras" value="tea">
+                        <label for="tea">шай</label><br>
+                        <input type="checkbox" id="salad" name="extras" value="salad">
+                        <label for="salad">Ачык-чучук</label>
+                    </p>
+                    <p>
+                        <label for="comments">Мекенжай немесе ескерту:</label><br>
+                        <textarea id="comments" name="comments" rows="4" cols="40" placeholder="Көше, үй, пәтер немесе ұсыныс..." autocomplete="street-address"></textarea>
+                    </p>
+                    <p>
+                        <input type="submit" value="Тапсырысты растау">
+                        <input type="reset" value="Тазалау">
+                    </p>
+                </fieldset>
+            </form>
+        </section>
+
+        <!-- Span is used only for the short promo code because no stronger semantic element is needed. -->
+        <aside>
+            <h2>Ескерту</h2>
+            <p>Ағымдағы промокод: <span class="promo-code">KHAN2552</span></p>
+            <!-- This div groups a small technical note that is not a separate article or section. -->
+            <div class="info-block">
+                <p>Бетті сақтағыңыз келсе, <kbd>Ctrl</kbd> + <kbd>S</kbd> пернелерін басыңыз.</p>
+            </div>
+        </aside>
+    </main>
+
+    <footer>
+        <address>
+            Қарағанды қаласы, Шағын аудан Степной-4, 30 &vert;
+            Телефон: <a href="tel:+77475791323">+7-747-579-13-23</a> &vert;
+            Email: <a href="mailto:info@dostyk.kz">info@dostyk.kz</a>
+        </address>
+        <p>&copy; 2026 «Dostyk restaurant». Барлық құқықтары қорғалған. &trade;</p>
+    </footer>
+</body>
+</html>
