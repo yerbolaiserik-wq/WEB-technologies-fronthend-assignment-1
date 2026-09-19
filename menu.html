@@ -6,35 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Dostyk restaurant ас мәзірі және негізгі бағалары">
     <meta name="author" content="Aiserik Yerbol">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/aiserik.css">
     <title>Dostyk restaurant — Ас мәзірі</title>
 </head>
 
 <body>
-    <p><a href="#main-content">Негізгі мазмұнға өту</a></p>
+    <p><a class="skip-link" href="#main-content">Негізгі мазмұнға өту</a></p>
+    <a class="fixed-call" href="tel:+77475791323">Қоңырау</a>
 
-    <header>
-        <h1>Dostyk restaurant</h1>
+    <header class="site-header">
+        <h1 class="site-title">Dostyk restaurant</h1>
+        <p class="site-tagline">Ас мәзірі</p>
         <!-- Relative links are used so every page works from the project folder. -->
-        <nav aria-label="Негізгі навигация">
+        <nav class="site-nav" aria-label="Негізгі навигация">
             <ul>
                 <li><a href="index.html">Басты бет</a></li>
                 <li><a href="menu.html" aria-current="page">Ас мәзірі</a></li>
                 <li><a href="order.html">Тапсырыс беру</a></li>
-                <li><a href="colophon.html">Сайт туралы</a></li>
             </ul>
         </nav>
     </header>
 
-    <main id="main-content">
-        <section id="prices">
+    <!-- This id is unique because the skip link needs exactly one landing point on the page. -->
+    <main id="main-content" class="page-shell">
+        <!-- This id is unique because category links jump back to the menu table. -->
+        <section id="prices" class="page-section menu-layout">
             <h2>Толық ас мәзірі</h2>
             <p>
-                Бұл бетте суреттегі мәзір HTML кесте түрінде берілді. Негізгі тағам — <abbr title="Қазақ халқының дәстүрлі тағамы">палау</abbr>, ал сусындар күн сайын <i>жаңа дайындалады</i>.
+                Dostyk restaurant мәзірінде бірінші тағамдар, палау, фаст-фуд, салаттар, тұздықтар және сусындар бар. Негізгі тағам — <abbr title="Қазақ халқының дәстүрлі тағамы">палау</abbr>, ал сусындар күн сайын <i>жаңа дайындалады</i>.
             </p>
             <p><a href="#categories">Категорияларға өту</a></p>
 
             <!-- A table is used because real prices are easier to compare in rows and columns. -->
-            <table aria-describedby="menu-note">
+            <table class="menu-table" aria-describedby="menu-note">
                 <caption>Суреттегі мәзір бойынша бағалар</caption>
                 <thead>
                     <tr>
@@ -315,7 +320,7 @@
             <p id="menu-note"><small><sup>1</sup> (с/ш) — стақанмен немесе шәйнекпен, <sup>2</sup> (с/л) — стақанмен немесе литрмен ұсынылу бағасы.</small></p>
         </section>
 
-        <section id="categories">
+        <section id="categories" class="page-section category-panel">
             <h2>Категориялар</h2>
             <ol type="I">
                 <li>Негізгі тағамдар
@@ -337,14 +342,14 @@
             <p><a href="#prices">Бағаларға қайту</a></p>
         </section>
 
-        <figure>
+        <figure class="media-card menu-photo">
             <img src="images/palay.jpg" alt="Dostyk restaurant дәмханасының палауы" width="400" height="225" loading="lazy">
             <figcaption>Дәмхананың негізгі тағамы — палау</figcaption>
         </figure>
     </main>
 
-    <footer>
-        <address>
+    <footer class="site-footer">
+        <address class="contact-block">
             Қарағанды қаласы, Шағын аудан Степной-4, 30 &vert;
             Телефон: <a href="tel:+77475791323">+7-747-579-13-23</a> &vert;
             Email: <a href="mailto:info@dostyk.kz">info@dostyk.kz</a>

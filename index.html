@@ -6,40 +6,56 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Қарағанды қаласындағы Dostyk restaurant туралы басты бет">
     <meta name="author" content="Aiserik Yerbol">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/aiserik.css">
+    <!-- Internal style exists only to demonstrate the cascade; it overrides the external .cascade-demo color on this page. -->
+    <style>
+        .cascade-demo {
+            color: #7a2e13;
+        }
+    </style>
     <title>Dostyk restaurant — Басты бет</title>
 </head>
 
 <body>
-    <p><a href="#main-content">Негізгі мазмұнға өту</a></p>
+    <p><a class="skip-link" href="#main-content">Негізгі мазмұнға өту</a></p>
+    <a class="fixed-call" href="tel:+77475791323">Қоңырау</a>
 
-    <header>
-        <h1>Dostyk restaurant</h1>
+    <header class="site-header">
+        <h1 class="site-title">Dostyk restaurant</h1>
+        <p class="site-tagline">Karaganda ұлттық дәмханасы</p>
         <!-- The navigation repeats on every page because the project is opened as local files, not through a server. -->
-        <nav aria-label="Негізгі навигация">
+        <nav class="site-nav" aria-label="Негізгі навигация">
             <ul>
                 <li><a href="index.html" aria-current="page">Басты бет</a></li>
                 <li><a href="menu.html">Ас мәзірі</a></li>
                 <li><a href="order.html">Тапсырыс беру</a></li>
-                <li><a href="colophon.html">Сайт туралы</a></li>
             </ul>
         </nav>
     </header>
 
-    <main id="main-content">
-        <section id="about">
+    <!-- This id is unique because the skip link needs exactly one landing point on the page. -->
+    <main id="main-content" class="page-shell">
+        <section id="about" class="page-section intro-grid">
             <h2>Дәмхана туралы</h2>
             <p>
                 Қарағанды қаласындағы <strong>«Dostyk restaurant»</strong> ұлттық тағамға көңіл бөлетін шағын дәмхана. Мұнда қонақтарға палау, сорпа, лағман, салат және шай ұсынылады. Бұл сайт дәмхананың негізгі мәліметін бір жерге жинайды.
             </p>
             <p>
-                Жобаның мақсаты — нақты мекеме туралы таза <em>HTML</em> құрылымын көрсету. Бетте ас мәзіріне, тапсырыс формасына және сайттың жасалу түсіндірмесіне өтетін салыстырмалы сілтемелер бар.
+                Қонақтар ас мәзірінен сүйікті тағамын қарап, алдын ала тапсырыс бере алады. Біз үшін <em>жайлы қызмет</em>, таза дастарқан және тұрақты дәм маңызды.
             </p>
+            <p class="float-story">
+                <img class="story-photo" src="images/interior.jpg" alt="Dostyk restaurant ішкі көрінісінен шағын сурет" width="180" height="240">
+                Дәмхана ішінде қонақтарға жайлы орын, отбасылық дастарқан және ыстық шай ұсынылады. Бұл мәтін суретпен бірге float қасиетін көрсету үшін жазылды.
+            </p>
+            <p class="clear-float">Бұл сөйлем float әсерінен кейін қалыпты мәтін ағынын қайта бастайды.</p>
             <p><a href="#contact">Байланыс бөліміне өту</a></p>
         </section>
 
-        <article>
+        <article class="page-section quote-card">
             <h2>Шеф-аспаз кеңесі</h2>
             <p>Шеф-аспаз қонақтарға <q>палауды асықпай, ыстық күйінде бөлісіп жеу керек</q> деп кеңес береді.</p>
+            <p class="cascade-demo">Дәмханадағы басты ұстаным — қонаққа ыстық тағамды уақытында ұсыну.</p>
             <blockquote cite="https://Dostyk.kz">
                 <p>«Палау — бұл жай ғана тамақ емес, бұл үлкен отбасы мен достардың басын қосатын берекелі дастарқан.»</p>
             </blockquote>
@@ -47,7 +63,8 @@
         </article>
 
         <!-- Contact information is an aside because it supports the page but is not the main story. -->
-        <aside id="contact">
+        <!-- This id is unique because same-page contact links must jump to one exact aside. -->
+        <aside id="contact" class="page-section opening-hours">
             <h2>Жұмыс уақыты</h2>
             <p>Күн сайын: <mark><time datetime="10:00">10:00</time> - <time datetime="22:00">22:00</time></mark></p>
             <p>Телефон: <a href="tel:+77475791323">+7-747-579-13-23</a></p>
@@ -55,12 +72,12 @@
             <p><a href="#about">Беттің басына қайту</a></p>
         </aside>
 
-        <figure>
+        <figure class="media-card featured-card">
             <img src="images/outside.jpg" alt="Dostyk restaurant ғимаратының сыртқы көрінісі" width="400" height="533">
             <figcaption>Дәмхананың сыртқы көрінісі</figcaption>
         </figure>
 
-        <figure>
+        <figure class="media-card">
             <img src="images/palay.jpg" alt="Шойын қазанда пісірілген дәстүрлі палау" width="400" height="225" loading="lazy">
             <figcaption>Шойын қазанда дайындалған палау</figcaption>
         </figure>
@@ -68,8 +85,8 @@
 
     <hr>
 
-    <footer>
-        <address>
+    <footer class="site-footer">
+        <address class="contact-block">
             Мекенжай:<br>
             Қарағанды қаласы, Шағын аудан Степной-4, 30, ТД Алмаз сыртқы бағыты<br>
             Телефон: <a href="tel:+77475791323">+7-747-579-13-23</a>
