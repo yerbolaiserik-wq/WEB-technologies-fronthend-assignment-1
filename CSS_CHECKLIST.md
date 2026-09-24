@@ -104,10 +104,4 @@ Student: Aiserik Yerbol
 | Centering technique 2 | `css/base.css` | 154 | margin auto |
 | Centering technique 3 | `css/aiserik.css` | 151 | grid `place-items` |
 
-## Still Needed for Submission
 
-- Hand-drawn layout sketch photos for two pages.
-- Before styling screenshot.
-- After styling screenshot.
-- Updated AI log entry for this work.
-- W3C HTML and CSS validator checks.
